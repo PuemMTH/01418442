@@ -4,6 +4,43 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Layout-CSS</title>
+		<style>
+			* {
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;
+				text-align: center;
+			}
+			body {
+				width: 90%;
+				margin: 0px auto;
+			}
+			#content {
+				overflow: auto;
+				height: 100%;
+			}
+			#nav,
+			#feature,
+			#footer {
+				background-color: #efefef;
+				margin: 10px;
+				padding: 10px;
+			}
+			.column1,
+			.column2,
+			.column3 {
+				background-color: #efefef;
+				width: 31.3%;
+				float: left;
+				margin: 1%;
+			}
+            .column3 {
+                margin-right: 0;
+            }
+			li {
+				display: inline;
+				padding: 5px;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="header">
@@ -11,38 +48,38 @@
 			<div class="nav">
 				<ul>
 					<li>
-						<a href="Home">
-                            Home
-                        </a>
+						<a href="Home"> Home </a>
 					</li>
 					<li>
-						<a href="Products">
-                            Products
-                        </a>
+						<a href="Products"> Products </a>
 					</li>
 					<li>
-						<a href="Services">
-                            Services
-                        </a>
+						<a href="Services"> Services </a>
 					</li>
 					<li>
-						<a href="About">
-                            About
-                        </a>
+						<a href="About"> About </a>
 					</li>
 					<li>
-						<a href="Contact">
-                            Contact
-                        </a>
+						<a href="Contact"> Contact </a>
 					</li>
 				</ul>
 			</div>
-            <div id="content">
-                <div id="feature"></div>
-                <div class="article column1"></div>
-                <div class="article column2"></div>
-                <div class="article column3"></div>
-            </div>
+			<div id="content">
+				<div id="feature">
+					<p>feature</p>
+				</div>
+				<div class="article column1">
+					<p>column 1</p>
+				</div>
+				<div class="article column2"><p>column 2</p></div>
+				<div class="article column3"><p>column 3</p></div>
+			</div>
+			<div id="footer">
+				<p>
+					&copy; 2020 - All Rights Reserved -
+					<a href="https://www.google.com">Google</a>
+				</p>
+			</div>
 		</div>
 	</body>
 </html>
