@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- case input -->
+		<form action="input.php" method="post">
+			<input type="text" name="name" id="name" placeholder="name" />
+			<input type="text" name="age" id="age" placeholder="age" />
+			<input type="submit" value="submit" />
+		</form>
+
+		<!-- case input -->
+		<form action="input.php" method="post">
+			<input type="text" name="name" id="name" placeholder="name" />
+			<input type="text" name="age" id="age" placeholder="age" />
+			<!-- Select -->
+			<select name="namelitener" id="namelitener">
+				<option value="1" selected>1</option>
+				<option value="2">2</option>
+			</select>
+			<input type="radio" name="radioInput" id="radioInput" />
+			<input type="radio" name="radioInput" id="radioInput" />
+			<input type="checkbox" name="checkboxInput" id="checkboxInput" checked />
+			<input type="submit" value="submit" />
+		</form>
+
+        <!-- case input -->
+        <form action="input.php" method="post">
+            <fieldset>
+                <legend>Personal information:</legend>
+                Name: <input type="text" name="name" id="name" placeholder="name" /><br />
+                Email: <input type="text" name="email" id="email" placeholder="email" /><br />
+                Date of birth: <input type="date" name="date" id="date" /><br />
+                <input type="submit" value="submit" />
+            </fieldset>
+        </form>
+        <a href="/ex form.html">
+            ex form
+        </a>
+	</body>
+</html>
