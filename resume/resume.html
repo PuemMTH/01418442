@@ -5,214 +5,50 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Resume | Tanapat Eiam-arj</title>
 		<link rel="icon" href="./image/PROFILE.jpg" type="image/x-icon" />
-		<style>
-			* {
-				box-sizing: border-box;
-			}
-
-			body {
-				font-family: Arial, Helvetica, sans-serif;
-				margin: 0;
-				padding: 0;
-			}
-
-			header {
-				background-color: #666;
-				padding: 30px;
-				text-align: center;
-				font-size: 35px;
-				color: white;
-			}
-
-			nav {
-				float: left;
-				width: 30%;
-				background: #ccc;
-				padding: 20px;
-				border-radius: 5px;
-			}
-
-			nav ul {
-				list-style-type: none;
-				padding: 0;
-			}
-
-			.displayProfile {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 10px;
-				text-align: center;
-			}
-
-			article {
-				float: left;
-				padding: 20px;
-				width: 70%;
-				background-color: #f1f1f1;
-			}
-
-			section::after {
-				content: "";
-				display: table;
-				clear: both;
-			}
-
-			footer {
-				background-color: #777;
-				padding: 10px;
-				text-align: center;
-				color: white;
-			}
-
-			@media (max-width: 600px) {
-				nav,
-				article {
-					width: 100%;
-					height: auto;
-				}
-			}
-
-			.image-profile {
-				width: 100%;
-				height: 100%;
-				border-radius: 5px;
-			}
-
-			.image-profile:hover {
-				opacity: 0.7;
-			}
-
-			.card {
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-				max-width: 150px;
-				margin: auto;
-				border-radius: 5px;
-				text-align: center;
-				font-family: Arial, Helvetica, sans-serif;
-			}
-
-			.cardNav {
-				max-width: 200px;
-				margin: auto;
-				border-radius: 5px;
-				text-align: center;
-				font-family: Arial, Helvetica, sans-serif;
-				background-color: #ccc;
-			}
-
-			.container {
-				padding: 0 16px;
-				display: flex;
-				justify-content: center;
-			}
-
-			.title {
-				color: grey;
-				font-size: 18px;
-			}
-
-			.profile {
-				border-radius: 50%;
-			}
-
-			.row-content {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				gap: 20px;
-			}
-
-			ul {
-				list-style-type: none;
-				padding: 0;
-			}
-
-			li {
-				padding: 5px;
-			}
-
-			.displayProfile {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 10px;
-			}
-
-			.profile-image {
-				border-radius: 10%;
-			}
-
-			::-webkit-scrollbar {
-				width: 10px;
-				background-color: #f5f5f5;
-			}
-
-			table {
-				width: 100%;
-				border-collapse: collapse;
-				margin: 25px 0;
-				font-size: 0.9em;
-				font-family: sans-serif;
-				min-width: 400px;
-				box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-			}
-
-			thead tr {
-				background-color: #009879;
-				color: #ffffff;
-				text-align: left;
-			}
-
-			th,
-			td {
-				padding: 12px 15px;
-			}
-
-			tr:hover {
-				background-color: rgb(185, 185, 185);
-			}
-
-			tbody tr {
-				border-bottom: 1px solid #dddddd;
-			}
-		</style>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<header>
 			<h2>Resume | Tanapat Eiam-arj</h2>
+			<h4>6421600093</h4>
 		</header>
 
 		<section>
 			<nav>
-				<div class="row">
-					<div class="displayProfile">
-						<img src="./image/PROFILE.jpg" alt="Avatar" style="width: 250px" class="profile-image"/>
-						<div>
-							<h4><b>Mr. Tanapat Eiam-arj</b></h4>
-							<p>Computer Science</p>
-							<p>6421600093</p>
-						</div>
-					</div>
-			
+				<div class="displayProfile">
+					<img
+						src="./image/PROFILE.jpg"
+						alt="Avatar"
+						style="width: 250px; margin: 5%"
+						class="profile-image"
+					/>
 				</div>
-			</nav>
+				<section id="summary">
+					<h2>Professional Summary</h2>
+					<p>
+						I am a software developer with experience in web development and a
+						passion for creating great user experiences.
+					</p>
+				</section>
 
+				<section id="skills">
+					<h2>Skills</h2>
+					<ul>
+						<li>Languages: JS/TS, Python, Java, C, Go, SQL, etc.</li>
+						<li>Frameworks/Libraries: React, NextJS, Node.js, etc.</li>
+						<li>Tools: Git, Docker, etc.</li>
+					</ul>
+				</section>
+			</nav>
 			<article>
 				<h1>Friend List</h1>
 				<div class="row row-content">
 					<div class="column">
 						<div class="card">
 							<a href="https://www.facebook.com/mayni09" target="_blank">
-								<img
-									src="./image/May.jpg"
-									alt="Avatar"
-									class="image-profile"
-								/>
+								<img src="./image/May.jpg" alt="Avatar" class="image-profile" />
 								<div class="container">
-									<h4><b>
-										May
-									</b></h4>
+									<h4><b> May </b></h4>
 								</div>
 							</a>
 						</div>
@@ -226,9 +62,7 @@
 									class="image-profile"
 								/>
 								<div class="container">
-									<h4><b>
-										Peraw
-									</b></h4>
+									<h4><b> Peraw </b></h4>
 								</div>
 							</a>
 						</div>
@@ -242,9 +76,7 @@
 									class="image-profile"
 								/>
 								<div class="container">
-									<h4><b>
-										Ma_mo
-									</b></h4>
+									<h4><b> Ma_mo </b></h4>
 								</div>
 							</a>
 						</div>
@@ -252,15 +84,9 @@
 					<div class="column">
 						<div class="card">
 							<a href="https://www.instagram.com/01134k/">
-								<img
-									src="./image/PK.jpg"
-									alt="Avatar"
-									class="image-profile"
-								/>
+								<img src="./image/PK.jpg" alt="Avatar" class="image-profile" />
 								<div class="container">
-									<h4><b>
-										PK
-									</b></h4>
+									<h4><b> PK </b></h4>
 								</div>
 							</a>
 						</div>
@@ -274,9 +100,7 @@
 									class="image-profile"
 								/>
 								<div class="container">
-									<h4><b>
-										Halls
-									</b></h4>
+									<h4><b> Halls </b></h4>
 								</div>
 							</a>
 						</div>
@@ -362,22 +186,22 @@
 					<div class="column like-section">
 						<h2>Like 🥰</h2>
 						<ul>
-							<li>🤓 Like a write code.</li>
-							<li>🎮 Like a play game.</li>
-							<li>📺 Like a watch anime.</li>
-							<li>🎧 Like a listen music.</li>
-							<li>🎬 Like a watch movie.</li>
+							<li>🤓 Like to write code.</li>
+							<li>🎮 Like to play game.</li>
+							<li>📺 Like to watch anime.</li>
+							<li>🎧 Like to listen music.</li>
+							<li>🎬 Like to watch movie.</li>
 						</ul>
 					</div>
-			
+
 					<div class="column unlike-section">
 						<h2>UnLike 😡</h2>
 						<ul>
-							<li>🥱 UnLike a wake up early in the morning.</li>
-							<li>💻 UnLike a fix computer.</li>
-							<li>📚 UnLike a do homework.</li>
-							<li>🧹 UnLike a do housework.</li>
-							<li>🏋️‍♂️ UnLike a do exercise.</li>
+							<li>🥱 Dislike waking up early in the morning.</li>
+							<li>💻 Dislike fixing computers.</li>
+							<li>📚 Dislike doing homework.</li>
+							<li>🧹 Dislike doing housework.</li>
+							<li>🏋️‍♂️ Dislike doing exercise.</li>
 						</ul>
 					</div>
 				</div>
@@ -385,7 +209,7 @@
 		</section>
 
 		<footer>
-			<p>&copy; 2023 by The Tanapat Eiam-arj</p>
+			<p>&copy; 2023 by Tanapat Eiam-arj</p>
 		</footer>
 	</body>
 </html>
