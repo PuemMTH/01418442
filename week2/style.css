@@ -1,0 +1,31 @@
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.cotainer {
+    width: 100%;
+    overflow: hidden;
+}
+.sidebar {
+    float: left;
+    width: 30%;
+    background-color: #f1f1f1;
+    height: 100%;
+    padding: 20px;
+}
+.content {
+    float: left;
+    padding: 20px;
+    background-color: #f1f1f1c4;
+    height: 100%;
+    width: 60%;
+    overflow: hidden;
+}
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}

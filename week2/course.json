@@ -1,0 +1,86 @@
+[
+    {
+      "subject_code": "01418442-60",
+      "subject_name_en": "Web Technology and Web Services",
+      "std_status_en": "Regular",
+      "teacher_name_en": "Warattapop Thapatsuwan",
+      "time_from": "10:00",
+      "time_to": "12:00",
+      "day_w": "MON ",
+      "room_name_th": "SC9-402",
+      "room_name_en": "SC9-402",
+      "time_start": 600
+    },
+    {
+      "subject_code": "01418442-60",
+      "subject_name_en": "Web Technology and Web Services",
+      "std_status_en": "Regular",
+      "teacher_name_en": "Warattapop Thapatsuwan",
+      "time_from": "13:00",
+      "time_to": "15:00",
+      "day_w": "MON ",
+      "room_name_th": "SC9-402",
+      "room_name_en": "SC9-402",
+      "time_start": 780
+    },
+    {
+      "subject_code": "01418351-60",
+      "subject_name_en": "Computer Communications and Cloud Computing Principles",
+      "std_status_en": "Regular",
+      "teacher_name_en": "Saranya Saetang",
+      "time_from": "9:00",
+      "time_to": "12:00",
+      "day_w": "TUE ",
+      "room_name_th": "LH4-605",
+      "room_name_en": "Select Class Room",
+      "time_start": 540
+    },
+    {
+      "subject_code": "01418390-60",
+      "subject_name_en": "Cooperative Education Preparation",
+      "std_status_en": "Regular",
+      "teacher_name_en": "Sasin Tiendee",
+      "time_from": "19:00",
+      "time_to": "21:00",
+      "day_w": "WED ",
+      "room_name_th": "ติดต่อผู้สอน",
+      "room_name_en": "Contact Teacher",
+      "time_start": 1140
+    },
+    {
+      "subject_code": "01418333-60",
+      "subject_name_en": "Automata Theory",
+      "std_status_en": "Regular",
+      "teacher_name_en": "Warattapop Thapatsuwan",
+      "time_from": "10:00",
+      "time_to": "12:00",
+      "day_w": "THU ",
+      "room_name_th": "LH4-605",
+      "room_name_en": "Select Class Room",
+      "time_start": 600
+    },
+    {
+      "subject_code": "01418334-60",
+      "subject_name_en": "Compiler Techniques",
+      "std_status_en": "Regular",
+      "teacher_name_en": "Warattapop Thapatsuwan",
+      "time_from": "10:00",
+      "time_to": "12:00",
+      "day_w": "FRI ",
+      "room_name_th": "LH4-605",
+      "room_name_en": "Select Class Room",
+      "time_start": 600
+    },
+    {
+      "subject_code": "01418332-60",
+      "subject_name_en": "Information System Security",
+      "std_status_en": "Regular",
+      "teacher_name_en": "Poravee Wongsawatsuriyha",
+      "time_from": "13:00",
+      "time_to": "16:00",
+      "day_w": "FRI ",
+      "room_name_th": "LH4-605",
+      "room_name_en": "Select Class Room",
+      "time_start": 780
+    }
+  ]
