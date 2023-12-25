@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Register Form</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- 
+            Create Form Name, Gender (radio), Interest (checkbox), Country (select), Submit button
+        -->
+		<div class="container">
+            <div class="form-header">
+                <h1>Register <span>Form</span></h1>
+            </div>
+
+			<form action="#" id="myForm" class="form">
+				<label for="name">Name:</label><br />
+				<input type="text" id="name" name="name" required value="Tanapat Eiam-arj"/>
+				<label for="name" class="error" id="name-error"></label><br />
+
+				<label for="gender">Gender:</label><br />
+				<input type="radio" id="male" name="gender" value="male" />
+				<label for="male">Male</label><br />
+				<input type="radio" id="female" name="gender" value="female" />
+				<label for="female">Female</label><br />
+                
+				<label for="interests">Interests:</label><br />
+				<input type="checkbox" id="sports" name="interests" value="sports" />
+				<label for="sports">Sports</label><br />
+				<input type="checkbox" id="music" name="interests" value="music" />
+				<label for="music">Music</label><br />
+				<input type="checkbox" id="travel" name="interests" value="travel" />
+				<label for="travel">Travel</label><br /><br />
+
+				<label for="country">Country:</label><br /> 
+				<select id="country" name="country" required>
+					<option value="">Select Country</option>
+					<option value="Thailand">Thailand</option>
+					<option value="United States">United States</option>
+					<option value="Japan">Japan</option></select
+				><br />
+
+				<input type="submit" value="Submit" class="btn btn-form"/>
+			</form>
+		</div>
+
+		<div>
+
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
