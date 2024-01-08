@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ]
     
-    
 	const loginBtn = document.querySelector(".login_btn");
 	const welcome = document.querySelector(".welcome");
 
