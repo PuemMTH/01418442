@@ -1,0 +1,90 @@
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 20px;
+    color: #666;
+}
+
+.message {
+    font-size: 20px;
+    color: #666;
+}
+
+.game {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.game-info {
+    flex: 1;
+    text-align: center;
+}
+
+.game-info .secret {
+    font-size: 100px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    margin: 0 auto;
+    animation: animate 0.5s ease-in-out;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.game .left {
+    flex: 1;
+    text-align: center;
+}
+
+.guess {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+.game .right {
+    flex: 1;
+    text-align: center;
+}
