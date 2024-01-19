@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Todo</title>
+		<script src="style.css"></script>
+	</head>
+	<body>
+		<h1>Todo List</h1>
+		<form id="form_add">
+			<label for="text">Input Text : </label>
+			<input
+				type="text"
+				placeholder="input your text."
+				name="input_text"
+				id="input_text"
+			/>
+			<button type="submit" id="Add">Add</button>
+			<button type="button" id="Reset">Reset</button>
+		</form>
+
+		<ol start="0" id="list_of_todo"></ol>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const form = document.getElementById("form_add");
+				const eventAdd = document.getElementById("Add");
+				const eventReset = document.getElementById("Reset");
+				const list_of_todo = document.getElementById("list_of_todo");
+
+				let todo = [];
+
+				eventAdd.addEventListener("click", (e) => {
+					e.preventDefault();
+					todo[todo.length] = form["input_text"].value;
+					list_of_todo.appendChild(
+						addList(form["input_text"].value, todo.length)
+					);
+					form["input_text"].value = "";
+				});
+
+				eventReset.addEventListener("click", (e) => {
+					e.preventDefault();
+					while (list_of_todo.firstChild) {
+						list_of_todo.removeChild(list_of_todo.firstChild);
+					}
+					todo = [];
+				});
+
+				function addList(text, _id) {
+					const childElement = document.createElement("li");
+					childElement.setAttribute("id", _id);
+
+					const todoText = document.createTextNode(text);
+					childElement.appendChild(todoText);
+
+					const removeButton = document.createElement("button");
+					removeButton.innerText = "Remove";
+					removeButton.addEventListener("click", () => {
+						removeItem(_id);
+					});
+
+					childElement.appendChild(removeButton);
+
+					return childElement;
+				}
+
+				function removeItem(_id) {
+					const elementToRemove = document.getElementById(_id);
+					list_of_todo.removeChild(elementToRemove);
+					todo = todo.filter((_, index) => index !== (_id - 1));
+				}
+			});
+		</script>
+
+		<script src="script.js"></script>
+	</body>
+</html>

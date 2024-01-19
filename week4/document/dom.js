@@ -73,5 +73,4 @@ document.addEventListener("DOMContentLoaded", function () {
         coin.style.left = Math.random() * (gameArea.offsetWidth - 30) + "px";
         return coin;
     }
-    
 });
