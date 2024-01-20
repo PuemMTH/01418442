@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap");
+
+body {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d6d6d6;
+}
+
+h1,
+h2 {
+  color: #333;
+  margin: 20px;
+}
+
+
+#resultsTable {
+  border-collapse: collapse;
+  width: 97%;
+  background-color: #f2f2f2;
+}
+
+#resultsTable th,
+#resultsTable td {
+  border: 1px solid #000000;
+  padding: 8px;
+}
+
+#resultsTable tr:nth-child(even) {
+  background-color: #a470b3;
+
+}
+
+#resultsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #6b1a7b;
+  color: #ffffff;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 2px 0;
+  box-sizing: border-box;
+}
+
+#addResultForm {
+  width: 50%;
+  margin: 0 auto;
+}
