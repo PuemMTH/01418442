@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>(Append Child) After Midterm</title>
+		<link rel="stylesheet" href="style.css" />
+		<style>
+            /* style table */
+
+            #myTable {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #myTable td, #myTable th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #myTable tr:nth-child(even){background-color: #f2f2f2;}
+
+            /* Form */
+
+            #myForm {
+                margin-top: 20px;
+            }
+
+            #myForm input {
+                padding: 10px;
+                margin-right: 10px;
+            }
+
+            #myForm input[type="submit"] {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+	</head>
+	<body>
+		<div id="container">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+            </table>
+
+            <form id="myForm">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="age" placeholder="Age">
+                <input type="submit" value="Add">
+            </form>
+        </div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

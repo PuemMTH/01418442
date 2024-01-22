@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Templete</title>
+		<link rel="stylesheet" href="style.css" />
+
+		<style>
+			form {
+				display: flex;
+				flex-direction: column;
+				width: 300px;
+				margin: 0 auto;
+			}
+
+			/* Style the label to display next to the inputs */
+			label {
+				padding: 12px 12px 12px 0;
+				display: inline-block;
+			}
+
+			/* Style the input */
+			input[type="text"],
+			input[type="password"],
+			input[type="email"] {
+				width: 100%;
+				padding: 12px;
+				border: 1px solid #ccc;
+				margin-bottom: 10px;
+				box-sizing: border-box;
+			}
+
+			/* Style the submit button */
+			input[type="submit"] {
+				background-color: #4caf50;
+				color: white;
+				border-radius: 2px solid #4caf50;
+				margin-top: 20px;
+				width: 100%;
+				display: block;
+				font-size: 16px;
+				padding: 10px;
+			}
+
+			.form input[type="submit"]:hover {
+				color: red;
+				cursor: pointer;
+				background-color: aqua;
+				border-radius: 2px solid aqua;
+				margin-top: 20px;
+				width: 100%;
+				display: block;
+				font-size: 16px;
+				padding: 10px;
+			}
+
+			.form {
+				border-radius: 5px;
+				background-color: #f2f2f2;
+				padding: 20px;
+			}
+
+			.form > small {
+				color: red;
+				font-size: 12px;
+				display: block;
+				margin-bottom: 10px;
+				visibility: hidden;
+			}
+
+			.form > small:hover {
+				background-color: red;
+				color: aqua;
+			}
+		</style>
+	</head>
+	<body>
+		<form class="form" id="myForm">
+			<label for="username">Username</label>
+			<input
+				type="text"
+				name="username"
+				id="username"
+				placeholder="Enter your username"
+			/>
+			<small id="small_username"></small>
+
+			<label for="email">Email</label>
+			<input
+				type="email"
+				name="email"
+				id="email"
+				placeholder="Enter your email"
+			/>
+            <small id="small_email"></small>
+
+			<label for="password">Password</label>
+			<input
+				type="password"
+				name="password"
+				id="password"
+				placeholder="Enter your password"
+			/>
+			<small id="small_password"></small>
+
+			<label for="confirmpassword">Confirm Password</label>
+			<input
+				type="password"
+				name="confirmpassword"
+				id="confirmpassword"
+				placeholder="Confirm your password"
+			/>
+			<small id="small_confirmpassword"></small>
+
+			<input type="submit" value="Submit" />
+		</form>
+
+		<script>
+			const form = document.querySelector("form");
+
+			form.addEventListener("submit", (e) => {
+				e.preventDefault();
+				const formData = new FormData(form); // get when submit
+                const small_username = document.querySelector("#small_username");
+                const small_email = document.querySelector("#small_email");
+                const small_password = document.querySelector("#small_password");
+                const small_confirmpassword = document.querySelector("#small_confirmpassword");
+                
+				const username = formData.get("username");
+				const email = formData.get("email");
+				const password = formData.get("password");
+				const confirmpassword = formData.get("confirmpassword");
+
+                if (checkPassword(password, confirmpassword)) {
+                    small_confirmpassword.style.visibility = "hidden";
+                } else {
+                    small_confirmpassword.style.visibility = "visible";
+                    small_confirmpassword.innerHTML = "Password is not match";
+                }
+                
+			});
+            
+            function checkPassword(pass1, pass2) {
+                if (pass1 !== pass2) {
+                    return false;
+                } else if (pass1 === pass2) {
+                    return true;
+                }
+            }
+		</script>
+		<script src="script.js"></script>
+	</body>
+</html>
