@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     table.appendChild(row)
   })
 
-  // เพิ่ม data ใหม่
+  // เพิ่ม data ใหม่4
   const addResultForm = document.getElementById("addResultForm");
   const resultsTable = document.getElementById("resultsTable");
   

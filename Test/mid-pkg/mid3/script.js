@@ -72,10 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	// show point
 	max_point = answer.length * 2;
 	show_point.innerHTML = point;
-	word.innerHTML = answer;
-	maxpoint.innerHTML = max_point;
-
-	console.log(answer);
 
 	// add button to letters A-Z
 	const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -150,8 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
-	document.getElementById('playAgain').addEventListener('click', () => {
-      window.location.reload();
-  })
-	
+	document.getElementById("playAgain").addEventListener("click", () => {
+		window.location.reload();
+	});
 });

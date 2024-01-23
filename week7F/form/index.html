@@ -7,20 +7,11 @@
 		<link rel="stylesheet" href="style.css" />
 
 		<style>
-			form {
-				display: flex;
-				flex-direction: column;
-				width: 300px;
-				margin: 0 auto;
-			}
-
-			/* Style the label to display next to the inputs */
 			label {
 				padding: 12px 12px 12px 0;
 				display: inline-block;
 			}
 
-			/* Style the input */
 			input[type="text"],
 			input[type="password"],
 			input[type="email"] {
@@ -31,7 +22,6 @@
 				box-sizing: border-box;
 			}
 
-			/* Style the submit button */
 			input[type="submit"] {
 				background-color: #4caf50;
 				color: white;
@@ -59,6 +49,7 @@
 				border-radius: 5px;
 				background-color: #f2f2f2;
 				padding: 20px;
+				width: 50%
 			}
 
 			.form > small {
@@ -115,39 +106,78 @@
 
 			<input type="submit" value="Submit" />
 		</form>
-
 		<script>
 			const form = document.querySelector("form");
 
 			form.addEventListener("submit", (e) => {
 				e.preventDefault();
 				const formData = new FormData(form); // get when submit
-                const small_username = document.querySelector("#small_username");
-                const small_email = document.querySelector("#small_email");
-                const small_password = document.querySelector("#small_password");
-                const small_confirmpassword = document.querySelector("#small_confirmpassword");
-                
-				const username = formData.get("username");
-				const email = formData.get("email");
-				const password = formData.get("password");
-				const confirmpassword = formData.get("confirmpassword");
 
-                if (checkPassword(password, confirmpassword)) {
-                    small_confirmpassword.style.visibility = "hidden";
+				username = {
+					alert: document.querySelector("#small_username"),
+					form: formData.get("username")
+				}
+
+				email = {
+					alert: document.querySelector("#small_email"),
+					form: formData.get("email")
+				}
+
+				password = {
+					alert: document.querySelector("#small_password"),
+					alert2: document.querySelector("#small_confirmpassword"),
+					form: formData.get("password"),
+					form2: formData.get("confirmpassword")
+				}
+
+				if (checkUsername(username)) {
+					elementChange(username, "success");
+				} else {
+					elementChange(
+						username,
+						"err",
+						"Username must be more than 10 characters"
+					);
+				}
+
+                if (checkPassword(password)) {
+					elementChange(password, "success");
                 } else {
-                    small_confirmpassword.style.visibility = "visible";
-                    small_confirmpassword.innerHTML = "Password is not match";
+					elementChange(
+						password,
+						"err",
+						"Password and Confirm Password must be the same"
+					);
                 }
                 
 			});
             
-            function checkPassword(pass1, pass2) {
-                if (pass1 !== pass2) {
-                    return false;
-                } else if (pass1 === pass2) {
-                    return true;
-                }
+            function checkPassword(pass) {
+				return pass.pass1 === pass.pass2;
             }
+
+			function checkUsername(username) {
+				return username.form.length <= 10 && username.form.length >= 6;
+			}
+
+			function elementChange(e, event, message) {
+				switch(event) {
+					case "err":
+						e.style.visibility = "visible";
+						e.innerHTML = message;
+
+						if(e.form2?.length > 0) {
+							e.form2.style.border = "1px solid red";
+						}
+						
+						break;
+					case "success":
+						e.style.visibility = "hidden";
+						break;
+					default:
+						break;					
+				}
+			}
 		</script>
 		<script src="script.js"></script>
 	</body>

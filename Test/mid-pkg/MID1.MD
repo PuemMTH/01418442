@@ -1,4 +1,6 @@
-## ในเพิ่มข้อมูลใน Table html ด้วย Javascript
+# Midterm ข้อที่ 1
+
+## นำข้อมูลมาแสดงใน Table html ด้วย Javascript
 
 ### 1. สร้างไฟล์ index.html และไฟล์ script.js
 
@@ -40,8 +42,6 @@ var table = document.getElementById("leagueTable");
 
 <!-- ขึ้นหน้าใหม่ tag html -->
 
-<br><br><br><br><br><br><br><br><br><br>
-
 ### 3. สร้างตัวแปรข้อมูลของตาราง
 
 ตัวอย่างข้อมูลในตัวแปล tableData
@@ -75,7 +75,9 @@ const tableData = [
 
 ### 4. เพิ่มข้อมูลในตาราง
 
-วิธีที่ 1 คือการอ้างอิงตัวแปร table tbody และใช้ innerHTML ในการเพิ่มข้อมูล โดยใช้ for loop สร้าง tag tr(row) และเพิ่ม ข้อมูลลงในแต่ละ td ของ row นั้นๆ
+#### วิธีที่ 1: ใช้ innerHTML และ for loop
+
+ในไฟล์ script.js:
 
 ```javascript
 document.addEventListener("DOMContentLoaded", () => {
@@ -83,22 +85,24 @@ document.addEventListener("DOMContentLoaded", () => {
 	tableData.forEach((data) => {
 		const row = document.createElement("tr");
 		row.innerHTML = `
-      <td>${data.team}</td>
-      <td>${data.played}</td>
-      <td>${data.win}</td>
-      <td>${data.draw}</td>
-      <td>${data.loss}</td>
-      <td>${data.goals_for}</td>
-      <td>${data.goals_against}</td>
-      <td>${data.goal_difference}</td>
-      <td>${data.points}</td>
-    `;
+            <td>${data.team}</td>
+            <td>${data.played}</td>
+            <td>${data.win}</td>
+            <td>${data.draw}</td>
+            <td>${data.loss}</td>
+            <td>${data.goals_for}</td>
+            <td>${data.goals_against}</td>
+            <td>${data.goal_difference}</td>
+            <td>${data.points}</td>
+        `;
 		table.appendChild(row);
 	});
 });
 ```
 
-วิธีที่ 2 คือการสร้าง object ของแต่ละ row และเพิ่มข้อมูลลงไปโดยใช้ for loop
+#### วิธีที่ 2: ใช้ Object และ for loop
+
+ในไฟล์ script.js:
 
 ```javascript
 document.addEventListener("DOMContentLoaded", () => {
@@ -116,6 +120,24 @@ document.addEventListener("DOMContentLoaded", () => {
 			goal_difference: document.createElement("td"),
 			points: document.createElement("td"),
 		};
+
+		// เพิ่มข้อมูลลงในแต่ละ cell
+		cell.team.textContent = data.team;
+		cell.played.textContent = data.played;
+		cell.win.textContent = data.win;
+		cell.draw.textContent = data.draw;
+		cell.loss.textContent = data.loss;
+		cell.goals_for.textContent = data.goals_for;
+		cell.goals_against.textContent = data.goals_against;
+		cell.goal_difference.textContent = data.goal_difference;
+		cell.points.textContent = data.points;
+
+		// เพิ่ม cell ลงใน row
+		Object.values(cell).forEach((value) => {
+			row.appendChild(value);
+		});
+
+		// เพิ่ม row ลงในตาราง
 		table.appendChild(row);
 	});
 });
