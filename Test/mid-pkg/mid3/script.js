@@ -61,6 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	const letters = document.getElementById("letters");
 	const word_show = document.getElementById("word");
 	const show_point = document.getElementById("point");
+	const max_point_show = document.getElementById("maxpoint");
+
 	// config point
 	let point = 0;
 	let max_point = 0;
@@ -72,6 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	// show point
 	max_point = answer.length * 2;
 	show_point.innerHTML = point;
+
+	// show word max_point
+	max_point_show.innerHTML = max_point;
+
 
 	// add button to letters A-Z
 	const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
