@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="checkout.css" />
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="checkout.css" />
+	</head>
+	<body>
+		<nav>
+			<div class="logo">
+				<h1>Your Store</h1>
+			</div>
+			<ul class="nav-links"></ul>
+		</nav>
 
-    <nav>
-        <div class="logo">
-            <h1>Your Store</h1> 
-        </div>
-        <ul class="nav-links"></ul>
-    </nav>
+		<div id="container">
+			<table>
+				<thead>
+					<tr>
+						<th>Image</th>
+						<th>Title</th>
+						<th>Description</th>
+						<th>Price</th>
+						<th>Count</th>
+						<th>Max Count</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody id="table-body"></tbody>
+			
+                <tfoot id="table-foot">
 
-    <div class="container" id="container"></div>
+                </tfoot>
+            </table>
 
-    <script>
-        const container = document.getElementById('container');
+            
+		</div>
 
-    </script>
-</body>
+		<script>
+			const container = document.getElementById("container");
+			const storeDataLocal = localStorage.getItem("storeData")
+				? JSON.parse(localStorage.getItem("storeData"))
+				: [];
+
+			function getHtml(data) {
+				const html = `
+                <tr>
+                    <td><img src="${data.imgSrc}" alt="${data.title}" style="max-width: 100px"></td>
+                    <td>${data.title}</td>
+                    <td>${data.text}</td>
+                    <td>${data.price}</td>
+                    <td>${data.count}</td>
+                    <td>${data.max_count}</td>
+                    <td><button onclick="removeItem(${data.id})" class="btn">Remove</button></td>
+                </tr>
+            `;
+				return html;
+			}
+
+			const tableBody = document.getElementById("table-body");
+			storeDataLocal.forEach((data) => {
+				if (data.count > 0) {
+					tableBody.innerHTML += getHtml(data);
+				}
+			});
+
+            const tablefoot = document.getElementById("table-foot")
+			const total = storeDataLocal.reduce((acc, data) => {
+				return acc + data.price * data.count
+			}, 0)
+
+			tablefoot.innerHTML = `
+				<tr>
+					<td colspan="3">Total</td>
+					<td>
+						${total} baht
+					</td>
+				</tr>
+			`
+
+			function removeItem(id) {
+				const storeDataLocal = localStorage.getItem("storeData")
+					? JSON.parse(localStorage.getItem("storeData"))
+					: [];
+
+				const newStoreData = storeDataLocal.filter((data) => String(data.id) !== String(id));
+                console.log(
+                    newStoreData
+                )
+				localStorage.setItem("storeData", JSON.stringify(newStoreData));
+				location.reload();
+			}
+		</script>
+	</body>
 </html>

@@ -76,7 +76,7 @@ function createCard(id, imgSrc, title, text, price) {
 
     const createPrice = document.createElement("p");
     createPrice.classList.add("card-price");
-    createPrice.textContent = price;
+    createPrice.textContent = `Price: $${price}`;
     createContent.appendChild(createPrice);
 
     createCard.appendChild(createContent);
@@ -128,6 +128,7 @@ function initData() {
                     drink.strInstructions,
                     random_price
                 );
+                updateCard();
                 document.querySelector(".container").appendChild(card);
             });
         });
